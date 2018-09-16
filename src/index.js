@@ -17,7 +17,7 @@ import {
 } from './icons/iconConstants'
 
 (async function () {
-  await generateIcons(100, 20)
+  await generateIcons(100, 1)
 
   fs.readdir(path.resolve(__dirname, '../icons'), (err, files) => {
     if (err) {
@@ -87,7 +87,7 @@ function clearRanks (type: mapIconTypes, source: mapIconSources, maxClearRank: n
   let rankedicons = []
   let i = maxClearRank
 
-  while (i) {
+  while (i >= 0) {
     rankedicons = rankedicons.concat(...userRanks(type, source, i, maxUserRank))
     i--
   }
@@ -101,7 +101,7 @@ function userRanks (type: mapIconTypes, source: mapIconSources, clearRank: numbe
   const icons = []
   let i = maxUserRank
 
-  while (i) {
+  while (i >= 0) {
     icons.push(icon(type, source, clearRank, i))
     i--
   }
