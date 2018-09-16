@@ -1,0 +1,6 @@
+node_modules
+*.log
+*.debug
+bin
+coverage
+src/icons/rasterizedIcons/*

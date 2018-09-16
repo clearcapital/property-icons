@@ -1,0 +1,6 @@
+bin
+node_modules
+client/libs
+templates
+data
+coverage
